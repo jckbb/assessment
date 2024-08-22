@@ -6,6 +6,7 @@ import { GetPageNumberFromScrollEventType, ImageResults } from "./types";
 const ImagePicker =
   Platform.OS === "android" ? ImagePickerAndroid : ImagePickerDep;
 
+// determine index of list item by distance traveled horizontally
 export const getPageNumberFromScrollEvent = ({
   e,
   arrayLength,
@@ -17,6 +18,7 @@ export const getPageNumberFromScrollEvent = ({
   );
 };
 
+// prevent spam clicking/pressing
 export const simpleThrottle = (func: () => void, timeFrame: number) => {
   var lastTime = 0;
   return () => {
