@@ -27,8 +27,6 @@ const ImageItem = ({ uri }: Props) => {
 
 const styles = StyleSheet.create({
   image: {
-    borderRadius: 20,
-    overflow: "hidden",
     flex: 1,
     width: "95%",
   },
